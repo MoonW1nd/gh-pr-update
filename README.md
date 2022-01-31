@@ -18,8 +18,8 @@
 - [jq](https://stedolan.github.io/jq/)
 
 Так же нужно задать переменные окружения в ваш `bash.rc`:
-GH_PR_UPDATE_API - API GitHub
-GH_PR_UPDATE_REPO - овнер и репозиторий
+- `GH_PR_UPDATE_API` - API GitHub
+- `GH_PR_UPDATE_REPO` - овнер и репозиторий
 
 Пример:
 
