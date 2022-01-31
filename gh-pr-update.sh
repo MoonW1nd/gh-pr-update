@@ -15,6 +15,8 @@ GET_PR_LIST_MESSAGE="get pr list"
 FETCH_DATA_MESSAGE="fetch updates"
 PUSH_CHANGES_MESSAGE="push changes"
 
+GH_API="${GH_PR_UPDATE_API:=https://api.github.com}"
+
 # Hashmap for bash
 # Set value: declare "array_$index=$value"
 # Get value: getHashMapValue arrayName hash
@@ -27,7 +29,7 @@ getHashMapValue() {
 getBaseBranch() {
     local pr_number=$1
     curl -s -H "Accept: application/vnd.github.v3+json" \
-        $GH_PR_UPDATE_API/repos/$GH_PR_UPDATE_REPO/pulls/$pr_number \
+        $GH_API/repos/$GH_PR_UPDATE_REPO/pulls/$pr_number \
         | jq .base.ref \
         | tr -d '"'
 }
