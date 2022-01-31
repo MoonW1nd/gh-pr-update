@@ -11,6 +11,7 @@
 - обновление графа веток
 - запись веток с конфликтами в отдельный файл для быстрого переключения
 
+> git push выполняется с флагом --no-verify
 
 ## Зависимости
 - [GitHub CLI](https://cli.github.com/)
@@ -27,6 +28,8 @@
 export GH_PR_UPDATE_API=https://api.github.com
 export GH_PR_UPDATE_REPO=moonw1nd/gh-pr-update
 ```
+## Быстрое переключение на ветки с конфлитами
+В репозитории есть так же простенький скрипт для переключения на ветки с конфликтами: `checkout-conflict-branch.sh`
 
 ### Todo
 - поддержать возможность обновления с помощью rebase
